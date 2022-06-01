@@ -1,16 +1,18 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, SafeAreaView } from "react-native";
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import Text from "../components/text/text";
+import PlanetHeader from "../components/PlanetHeader";
+import { colors } from "../theme/colors";
 export default function Home() {
   return (
-    <View>
-      <Text preset="h1">App</Text>
-      <Text preset="h2">App</Text>
-      <Text preset="paragraph">Jottosob</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <PlanetHeader />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.black,
+  },
+});

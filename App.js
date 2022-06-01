@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import React from "react";
 import { colors } from "./src/theme/colors";
 import { useFonts } from "expo-font";
@@ -30,7 +30,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
